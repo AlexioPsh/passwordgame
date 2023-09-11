@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Password Game</title>
+</head>
+<body>
+    <div class="container">
+        <div class="timer">
+            <span id="timer"></span>
+        </div>
+        <div class="title">
+            <b><h1>Welcome to the password game</h1></b>
+        </div>
+        <div class="Password">
+            Please type a password:<br>
+            <input type="text" id="password" class="password">
+
+        </div>
+        <div class="rules" id="rule10">
+            <div class="rulestitle" id="rule10title">
+                <div style="padding-left: 50px;">
+                    Rule    
+                </div>
+            </div>
+            <div class="rulescontent" id="rule10content">
+                <div style="padding-left: 50px;">
+                    Password must contain today's date in the format dd/mm/yy
+                </div>
+            </div>
+        </div>
+        <div class="rules" id="rule9">
+            <div class="rulestitle" id="rule9title">
+                <div style="padding-left: 50px;">
+                    Rule 9   
+                </div>
+            </div>
+            <div class="rulescontent" id="rule9content">
+                <div style="padding-left: 50px;">
+                    Password must contain today's date in the format dd/mm/yy
+                </div>
+            </div>
+        </div>
+        <div class="rules" id="rule8">
+            <div class="rulestitle" id="rule8title">
+                <div style="padding-left: 50px;">
+                    Rule 8   
+                </div>
+            </div>
+            <div class="rulescontent" id="rule8content">
+                <div style="padding-left: 50px;">
+                    Password must include an european country
+                </div>
+            </div>
+        </div>
+        <div class="rules" id="rule7">
+            <div class="rulestitle" id="rule7title">
+                <div style="padding-left: 50px;">
+                    Rule 7   
+                </div>
+            </div>
+            <div class="rulescontent" id="rule7content">
+                <div style="padding-left: 50px;">
+                    <span id="randomString"></span>
+                    <button onclick="generateRandomString()">Regenerate</button>
+                </div>
+            </div>
+        </div>
+        <div class="rules" id="rule6">
+            <div class="rulestitle" id="rule6title">
+                <div style="padding-left: 50px;">
+                    Rule 6    
+                </div>
+            </div>
+            <div class="rulescontent" id="rule6content">
+                <div style="padding-left: 50px;">
+                    <p id="rule6question"></p>
+                    <button onclick="regenerateVidTime()">Regenerate</button>
+                    <p>Video Duration: <span id="videoDuration"></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="rules" id="rule5">
+            <div class="rulestitle" id="rule5title">
+                <div style="padding-left: 50px;">
+                    Rule 5   
+                </div>
+                
+            </div>
+            <div class="rulescontent" id="rule5content">
+                <div style="padding-left: 50px;">
+                    Add your birth year
+                </div>
+            </div>
+        </div>
+        <div class="rules" id="rule4">
+            <div class="rulestitle" id="rule4title">
+                <div style="padding-left: 50px;">
+                    Rule 4   
+                </div>
+                
+            </div>
+            <div class="rulescontent" id="rule4content">
+                <div style="padding-left: 50px;">
+                    Chose a letter to not be able to use (until the game ends):<br>
+                    <input type="text" id="chosenLetter">
+                </div>
+            </div>
+        </div>
+        <div class="rules" id="rule3">
+            <div class="rulestitle" id="rule3title">
+                <div style="padding-left: 50px;">
+                    Rule 3    
+                </div>
+            </div>
+            <div class="rulescontent" id="rule3content">
+                <div style="padding-left: 50px;">
+                    <p id="randomInt"></p>
+                    <p id="currentSum"></p>
+                </div>
+            </div>
+        </div>
+        <div class="rules" id="rule2">
+            <div class="rulestitle" id="rule2title">
+                <div style="padding-left: 50px;">
+                    Rule 2   
+                </div>
+            </div>
+            <div class="rulescontent" id="rule2content">
+                <div style="padding-left: 50px;">
+                    Password must include numbers
+                </div>
+            </div>
+        </div>
+        <div class="rules" id="rule1">
+            <div class="rulestitle" id="rule1title">
+                <div style="padding-left: 50px;">
+                    Rule 1    
+                </div>
+            </div>
+            <div class="rulescontent" id="rule1content">
+                <div style="padding-left: 50px;">
+                    The password must be at least 5 characters long
+                </div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+    <script src="logic.js"></script>
+</body>
+</html>
