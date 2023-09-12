@@ -19,15 +19,24 @@
             <input type="text" id="password" class="password">
 
         </div>
+
+
+
+
+
         <div class="rules" id="rule10">
             <div class="rulestitle" id="rule10title">
                 <div style="padding-left: 50px;">
-                    Rule    
+                    Rule 10 
                 </div>
             </div>
-            <div class="rulescontent" id="rule10content">
+            <div class="rulescontent" id="rule10content" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
                 <div style="padding-left: 50px;">
-                    Password must contain today's date in the format dd/mm/yy
+                    <div>
+                        Name the race of the dog:    
+                    </div>
+                
+                    <img id="dogImg" class="dog_img" src="">
                 </div>
             </div>
         </div>
@@ -148,6 +157,40 @@
         </div>
         <br><br>
     </div>
+    <div class="gambleSlot">
+        <div class="gambleSlotTitle">
+            The Gamble Machine    
+        </div>
+        <div class="gambleSlotContent">
+            <div class="gambleSlotDescription">
+                This gamble can be used when you are almost running out of time; each spin costs 5seconds;
+                You only win time if all results are the same
+                <br>
+                3 cats= 30s;
+                <br>
+                3 birds= 45s;
+                <br>
+                3 dogs= 1m;
+                <br>
+                3 7= 5min;
+            </div>
+            <div class="containerSlotResult">
+                <div>
+                    <span id="spinResult1"></span>
+                </div>
+                <div>
+                    <span id="spinResult2"></span>
+                </div>
+                <div>
+                    <span id="spinResult3"></span>
+                </div>
+            </div>
+            <div>
+                <button onclick="gamble()">spin</button>            
+            </div>
+        </div>
+    </div>
+
     <script src="logic.js"></script>
 </body>
 </html>

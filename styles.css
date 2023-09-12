@@ -10,6 +10,55 @@ body{
     justify-content: center;
     gap: 50px;
 }
+.containerSlotResult{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.gambleSlot{
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: fixed;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 50%; 
+    margin-left: 15px;
+    transform: translateY(-50%); 
+    width: 300px; 
+    background-color: white;    
+}
+.gambleSlotTitle{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    width: 100%;
+    background-color: green;
+}
+.gambleSlotContent{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: pink;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+.gambleSlotDescription{
+    margin: 10px;
+}
 .timer{
     font-size: 60px;
 }
@@ -45,6 +94,10 @@ body{
     height: 100%;
     background-color: rgb(255, 95, 95);
 }
+.dog_img{
+    width: 300px;
+    height: 180px;
+}
 #rule2{
     display: none;
 }
@@ -71,4 +124,7 @@ body{
 }
 #rule10{
     display: none;
+}
+#rule11{
+    display: block;
 }

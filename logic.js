@@ -51,6 +51,11 @@ function updateCountdown() {
         document.getElementById("rule3").style.display = "none";
         document.getElementById("rule4").style.display = "none";
         document.getElementById("rule5").style.display = "none";
+        document.getElementById("rule6").style.display = "none";
+        document.getElementById("rule7").style.display = "none";
+        document.getElementById("rule8").style.display = "none";
+        document.getElementById("rule9").style.display = "none";
+        document.getElementById("rule10").style.display = "none";
     }
 }
 
@@ -60,6 +65,7 @@ function startCountdown() {
 }
 function checkrules(){
 
+    rule10();
     if(startTimer==0){
         startCountdown();
         startTimer=1;
@@ -80,6 +86,8 @@ function checkrules(){
         document.getElementById("rule6").style.display = "none";
         document.getElementById("rule7").style.display = "none";
         document.getElementById("rule8").style.display = "none";
+        document.getElementById("rule9").style.display = "none";
+        document.getElementById("rule10").style.display = "none";
     }
     // RULE 2
     if(rule2()==true){
@@ -93,6 +101,11 @@ function checkrules(){
         document.getElementById("rule3").style.display = "none";
         document.getElementById("rule4").style.display = "none";
         document.getElementById("rule5").style.display = "none";
+        document.getElementById("rule6").style.display = "none";
+        document.getElementById("rule7").style.display = "none";
+        document.getElementById("rule8").style.display = "none";
+        document.getElementById("rule9").style.display = "none";
+        document.getElementById("rule10").style.display = "none";
     }
     //RULE 3
     if(rule3()==true){
@@ -105,6 +118,11 @@ function checkrules(){
     else{
         document.getElementById("rule4").style.display = "none";
         document.getElementById("rule5").style.display = "none";
+        document.getElementById("rule6").style.display = "none";
+        document.getElementById("rule7").style.display = "none";
+        document.getElementById("rule8").style.display = "none";
+        document.getElementById("rule9").style.display = "none";
+        document.getElementById("rule10").style.display = "none";
     }
     //RULE 4
     if(rule4()==true){
@@ -112,8 +130,12 @@ function checkrules(){
 
     }
     else{
-        
         document.getElementById("rule5").style.display = "none";
+        document.getElementById("rule6").style.display = "none";
+        document.getElementById("rule7").style.display = "none";
+        document.getElementById("rule8").style.display = "none";
+        document.getElementById("rule9").style.display = "none";
+        document.getElementById("rule10").style.display = "none";
     }
     //RULE 5
     if(rule5()==true){
@@ -125,6 +147,10 @@ function checkrules(){
     }
     else{
         document.getElementById("rule6").style.display = "none";
+        document.getElementById("rule7").style.display = "none";
+        document.getElementById("rule8").style.display = "none";
+        document.getElementById("rule9").style.display = "none";
+        document.getElementById("rule10").style.display = "none";
     }
     //RULE 6
     if(rule6()==true){
@@ -136,6 +162,9 @@ function checkrules(){
     }
     else{
         document.getElementById("rule7").style.display = "none";
+        document.getElementById("rule8").style.display = "none";
+        document.getElementById("rule9").style.display = "none";
+        document.getElementById("rule10").style.display = "none";
     }
     //RULE 7
     if(rule7()==true){
@@ -147,6 +176,8 @@ function checkrules(){
     }
     else{
         document.getElementById("rule8").style.display = "none";
+        document.getElementById("rule9").style.display = "none";
+        document.getElementById("rule10").style.display = "none";
     }
     //RULE 8
     if(rule8()==true){
@@ -158,6 +189,7 @@ function checkrules(){
     }
     else{
         document.getElementById("rule9").style.display = "none";
+        document.getElementById("rule10").style.display = "none";
     }
     //RULE 9
     if(rule9()==true){
@@ -169,6 +201,16 @@ function checkrules(){
     }
     else{
         document.getElementById("rule10").style.display = "none";
+    }
+    if(rule10()==true){
+        if(ruleTimeCheck[9]==0){
+            countdownValue= countdownValue+30;
+            ruleTimeCheck[9]=1;
+        }
+        document.getElementById("rule11").style.display = "block";
+    }
+    else{
+        document.getElementById("rule11").style.display = "none";
     }
 
 
@@ -345,7 +387,7 @@ function rule6(){
     console.log("youtube link found:" + youtubeLink);
     var randDurationInSeconds = randMin *60 + randSec;
     var durationInSeconds;
-    var apiKey = 'AIzaSyDijlU1RZBAE6E0YPFMRQBUoP4rJTu3tts'; 
+    var apiKey = "put your API key here"; 
     var videoId = extractVideoId(youtubeLink);
     console.log("videoID"+ videoId);
     var apiUrl = 'https://www.googleapis.com/youtube/v3/videos?id=' + videoId +
@@ -454,12 +496,88 @@ function rule9(){
     if(password.value.includes(stringDate)){
         document.getElementById("rule9title").style.backgroundColor = "green";
         document.getElementById("rule9content").style.backgroundColor = "#5FFF5F";
+        return true;
     }
     else {
         document.getElementById("rule9title").style.backgroundColor = "red";
         document.getElementById("rule9content").style.backgroundColor = "#FF5F5F";
+        return false;
     }
 
 
 }
+
+var LimiterRandDog=0;
+var randDog;
+function rule10(){
+    const dogRaces = [
+        "bulldog", "golden", "german shepherd", "husky", "rottweiler", "chihuahua", "chow chow",
+        "doberman", "poodle", "dachshund", "yorkshire terrier", "shih-tzu", "shiba", "dalmatian",
+    ];
+    if(LimiterRandDog==0){
+      randDog=getRandomInt(0, 13);  
+      LimiterRandDog=LimiterRandDog+1;
+    }
+    console.log(randDog);
+    console.log(dogRaces[randDog]);
+    if(randDog <10){
+        document.getElementById("dogImg").src = "dog_pics/0"+randDog+".jpg";
+    }
+    else{
+        document.getElementById("dogImg").src = "dog_pics/"+randDog+".jpg";
+    }
+    if(password.value.toLowerCase().includes(dogRaces[randDog])){
+        document.getElementById("rule10title").style.backgroundColor = "green";
+        document.getElementById("rule10content").style.backgroundColor = "#5FFF5F";
+        return true;
+    }
+    else{
+        document.getElementById("rule10title").style.backgroundColor = "red";
+        document.getElementById("rule10content").style.backgroundColor = "#FF5F5F";
+        return false;
+    }
+}
+function gamble(){
+    
+    var rand = [0,0,0];
+    var slot = ["", "", "", ""];
+    if(countdownValue>5){
+        for(let x=0; x<3;x++){
+            rand[x]=getRandomInt(1,100);
+            if(rand[x]<=40){
+                slot[x]="Cat";
+            }
+            if(rand[x]>40 && rand[x]<=70){
+                slot[x]="Bird";
+            }
+            if(rand[x]>70 && rand[x]<=90){
+                slot[x]="Dog";
+            }
+            if(rand[x]>90 && rand[x]<=100){
+                slot[x]="7";
+            }
+        }
+
+        if(slot[0]==slot[1]==slot[2]){
+            if(slot[0]=="Cat"){
+                countdownValue=countdownValue+30;
+            }
+            if(slot[0]=="Bird"){
+                countdownValue=countdownValue+45;
+            }
+            if(slot[0]=="Dog"){
+                countdownValue=countdownValue+60;
+            }
+            if(slot[0]=="7"){
+                countdownValue=countdownValue+(60*5);
+            }
+        }
+        document.getElementById("spinResult1").textContent=slot[0];
+        document.getElementById("spinResult2").textContent=slot[1];
+        document.getElementById("spinResult3").textContent=slot[2];
+        countdownValue=countdownValue-5; 
+    }
+}
+
+
 
