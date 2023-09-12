@@ -557,8 +557,7 @@ function gamble(){
                 slot[x]="7";
             }
         }
-
-        if(slot[0]==slot[1]==slot[2]){
+        if(slot[0]==slot[1]&&slot[0]==slot[2]){
             if(slot[0]=="Cat"){
                 countdownValue=countdownValue+30;
             }
