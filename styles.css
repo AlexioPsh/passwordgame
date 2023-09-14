@@ -193,17 +193,16 @@ body{
     .password{
         font-size: 20px;
         height: 50px;
-        width: 350px;
+        width: 400px;  
     }
     .rules{
         color: black;
         height: 200px;
-        width: 100%;  
+        width: 90%;
         background-color: black;
         margin-top: 20px;
     }
     .gambleSlot{
-        width: 100%;  
+        width: 100%;   
     }
 }
-
