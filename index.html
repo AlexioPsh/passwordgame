@@ -226,39 +226,42 @@
         </div>
         <br><br>
     </div>
-    <div class="gambleSlot">
-        <div class="gambleSlotTitle" id="gambleSlotTitle">
-            The Gamble Machine    
-        </div>
-        <div class="gambleSlotContent" id="gambleSlotContent">
-            <div class="gambleSlotDescription">
-                This gamble can be used when you are almost running out of time; each spin costs 5seconds;
-                You only win time if all results are the same
-                <br>
-                3 cats= 30s;
-                <br>
-                3 birds= 45s;
-                <br>
-                3 dogs= 1m;
-                <br>
-                3 7= 5min;
+    <div class="sticky">
+        <div class="gambleSlot">
+            <div class="gambleSlotTitle" id="gambleSlotTitle">
+                The Gamble Machine    
             </div>
-            <div class="containerSlotResult">
-                <div>
-                    <span id="spinResult1"></span>
+            <div class="gambleSlotContent" id="gambleSlotContent">
+                <div class="gambleSlotDescription">
+                    This gamble can be used when you are almost running out of time; each spin costs 5seconds;
+                    You only win time if all results are the same
+                    <br>
+                    3 cats= 30s;
+                    <br>
+                    3 birds= 45s;
+                    <br>
+                    3 dogs= 1m;
+                    <br>
+                    3 7= 5min;
+                </div>
+                <div class="containerSlotResult">
+                    <div>
+                        <span id="spinResult1"></span>
+                    </div>
+                    <div>
+                        <span id="spinResult2"></span>
+                    </div>
+                    <div>
+                        <span id="spinResult3"></span>
+                    </div>
                 </div>
                 <div>
-                    <span id="spinResult2"></span>
-                </div>
-                <div>
-                    <span id="spinResult3"></span>
+                    <button onclick="gamble()">spin</button>            
                 </div>
             </div>
-            <div>
-                <button onclick="gamble()">spin</button>            
-            </div>
-        </div>
+        </div>        
     </div>
+    
 
     <script src="logic.js"></script>
 </body>
