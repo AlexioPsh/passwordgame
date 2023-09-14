@@ -107,6 +107,7 @@ function checkrules(){
         document.getElementById("rule13").style.display = "none";
         document.getElementById("rule14").style.display = "none";
         document.getElementById("rule15").style.display = "none";
+        return 0;
     }
     // RULE 2
     if(rule2()==true){
@@ -130,6 +131,7 @@ function checkrules(){
         document.getElementById("rule13").style.display = "none";
         document.getElementById("rule14").style.display = "none";
         document.getElementById("rule15").style.display = "none";
+        return 0;
     }
     //RULE 3
     if(rule3()==true){
@@ -152,6 +154,7 @@ function checkrules(){
         document.getElementById("rule13").style.display = "none";
         document.getElementById("rule14").style.display = "none";
         document.getElementById("rule15").style.display = "none";
+        return 0;
     }
     //RULE 4
     if(rule4()==true){
@@ -170,6 +173,7 @@ function checkrules(){
         document.getElementById("rule13").style.display = "none";
         document.getElementById("rule14").style.display = "none";
         document.getElementById("rule15").style.display = "none";
+        return 0;
     }
     //RULE 5
     if(rule5()==true){
@@ -190,9 +194,11 @@ function checkrules(){
         document.getElementById("rule13").style.display = "none";
         document.getElementById("rule14").style.display = "none";
         document.getElementById("rule15").style.display = "none";
+        return 0;
     }
     //RULE 6
     if(rule6()==true){
+        console.log("entrou na rule 6 = true");
         if(ruleTimeCheck[5]==0){
             countdownValue= countdownValue+30;
             ruleTimeCheck[5]=1;
@@ -227,6 +233,7 @@ function checkrules(){
         document.getElementById("rule13").style.display = "none";
         document.getElementById("rule14").style.display = "none";
         document.getElementById("rule15").style.display = "none";
+        return 0;
     }
     //RULE 8
     if(rule8()==true){
@@ -244,6 +251,7 @@ function checkrules(){
         document.getElementById("rule13").style.display = "none";
         document.getElementById("rule14").style.display = "none";
         document.getElementById("rule15").style.display = "none";
+        return 0;
     }
     //RULE 9
     if(rule9()==true){
@@ -260,6 +268,7 @@ function checkrules(){
         document.getElementById("rule13").style.display = "none";
         document.getElementById("rule14").style.display = "none";
         document.getElementById("rule15").style.display = "none";
+        return 0;
     }
     //RULE 10
     if(rule10()==true){
@@ -275,6 +284,7 @@ function checkrules(){
         document.getElementById("rule13").style.display = "none";
         document.getElementById("rule14").style.display = "none";
         document.getElementById("rule15").style.display = "none";
+        return 0;
     }
     //RULE 11
     if(rule11()==true){
@@ -289,6 +299,7 @@ function checkrules(){
         document.getElementById("rule13").style.display = "none";
         document.getElementById("rule14").style.display = "none";
         document.getElementById("rule15").style.display = "none";
+        return 0;
     }
     //RULE 12
     if(rule12()==true){
@@ -302,6 +313,7 @@ function checkrules(){
         document.getElementById("rule13").style.display = "none";
         document.getElementById("rule14").style.display = "none";
         document.getElementById("rule15").style.display = "none";
+        return 0;
     }
     //RULE 13
        if(rule13()==true){
@@ -314,6 +326,7 @@ function checkrules(){
     else{
         document.getElementById("rule14").style.display = "none";
         document.getElementById("rule15").style.display = "none";
+        return 0;
     }
     //RULE 14
        if(rule14()==true){
@@ -322,6 +335,7 @@ function checkrules(){
             ruleTimeCheck[13]=1;
         }
         document.getElementById("rule15").style.display = "block";
+        return 0;
     }
     else{
         document.getElementById("rule15").style.display = "none";
@@ -385,8 +399,8 @@ function rule3() {
     var arrayNumbers = mergedNumbers.toString().split('');
     var sum = 0;
     if(randLimiter==0){
-        var min=30;
-        var max=60;
+        var min=50;
+        var max=80;
         rand= getRandomInt(min,max);
         document.getElementById("randomInt").textContent="All digits must add up to " + rand;
         randLimiter++;
@@ -534,7 +548,8 @@ function rule6(){
                     document.getElementById("rule7").style.display = "none";
                     return false;
                 }                
-            } else {
+            }
+            else {
                 document.getElementById("videoDuration").textContent = "Video not found.";
             }
         })
@@ -572,12 +587,15 @@ function generateRandomString() {
     return randomString;
 }
 function rule7(){
-    if(password.value.includes(randomString) && document.getElementById("rule7").style.display === "block"){
+    console.log(randomString);
+    if(password.value.includes(randomString)){
+        console.log("funfou");
         document.getElementById("rule7title").style.backgroundColor = "green";
         document.getElementById("rule7content").style.backgroundColor = "#5FFF5F";
         return true;
     }
     else{
+        console.log("n funfou");
         document.getElementById("rule7title").style.backgroundColor = "red";
         document.getElementById("rule7content").style.backgroundColor = "#FF5F5F";
         return false;
@@ -633,7 +651,7 @@ var randDog;
 function rule10(){
     const dogRaces = [
         "bulldog", "golden", "german shepherd", "husky", "rottweiler", "chihuahua", "chow chow",
-        "doberman", "poodle", "dachshund", "yorkshire terrier", "shih-tzu", "shiba", "dalmatian",
+        "doberman", "poodle", "dachshund", "yorkshire", "shih-tzu", "shiba", "dalmatian",
     ];
     if(LimiterRandDog==0){
       randDog=getRandomInt(0, 13);  
@@ -835,7 +853,8 @@ function gamble(){
         document.getElementById("spinResult1").textContent=slot[0];
         document.getElementById("spinResult2").textContent=slot[1];
         document.getElementById("spinResult3").textContent=slot[2];
-        countdownValue=countdownValue-5; 
+        countdownValue=countdownValue-5;
+        updateCountdown(); 
     }
 }
 
