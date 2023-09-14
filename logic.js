@@ -506,12 +506,13 @@ function rule6(){
     if (match) {
         youtubeLink = match[0];
     } 
-
+    console
+    console.log("youtube link found:" + youtubeLink);
     var randDurationInSeconds = randMin *60 + randSec;
     var durationInSeconds;
-    var apiKey = "put your API key here"; 
+    var apiKey = "AIzaSyDijlU1RZBAE6E0YPFMRQBUoP4rJTu3tts"; 
     var videoId = extractVideoId(youtubeLink);
-
+    console.log("videoID"+ videoId);
     var apiUrl = 'https://www.googleapis.com/youtube/v3/videos?id=' + videoId +
                  '&part=contentDetails&key=' + apiKey;
     fetch(apiUrl)
