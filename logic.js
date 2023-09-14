@@ -36,27 +36,41 @@ function updateCountdown() {
     } else {
         clearInterval(countdownInterval);
         countdownElement.textContent = 'Game Over! You lost!';
-        for(var x=0; x<15; x++){
-            ruleTimeCheck[x]=0;
-        }
-        startTimer=0;
-        countdownValue = 60; 
-        password.value="";
-        randMin=0;
-        randSec=0;
-        limiterTime=0;
-        document.getElementById("rule1title").style.backgroundColor = "red";
-        document.getElementById("rule1content").style.backgroundColor = "#FF5F5F";
-        document.getElementById("rule2").style.display = "none";
-        document.getElementById("rule3").style.display = "none";
-        document.getElementById("rule4").style.display = "none";
-        document.getElementById("rule5").style.display = "none";
-        document.getElementById("rule6").style.display = "none";
-        document.getElementById("rule7").style.display = "none";
-        document.getElementById("rule8").style.display = "none";
-        document.getElementById("rule9").style.display = "none";
-        document.getElementById("rule10").style.display = "none";
+        reset();
     }
+
+}
+
+function reset(){
+    for(var x=0; x<15; x++){
+        ruleTimeCheck[x]=0;
+    }
+    startTimer=0;
+    countdownValue = 60; 
+    password.value="";
+    randMin=0;
+    randSec=0;
+    limiterTime=0;
+    LimiterRandDog=0;
+    LimiterRandRiddle=0;
+    hexRandLimiter=0;
+    document.getElementById("rule1title").style.backgroundColor = "red";
+    document.getElementById("rule1content").style.backgroundColor = "#FF5F5F";
+    document.getElementById("rule2").style.display = "none";
+    document.getElementById("rule3").style.display = "none";
+    document.getElementById("rule4").style.display = "none";
+    document.getElementById("rule5").style.display = "none";
+    document.getElementById("rule6").style.display = "none";
+    document.getElementById("rule7").style.display = "none";
+    document.getElementById("rule8").style.display = "none";
+    document.getElementById("rule9").style.display = "none";
+    document.getElementById("rule10").style.display = "none";
+    document.getElementById("rule11").style.display = "none";
+    document.getElementById("rule12").style.display = "none";
+    document.getElementById("rule13").style.display = "none";
+    document.getElementById("rule14").style.display = "none";
+    document.getElementById("rule15").style.display = "none";
+
 }
 
 function startCountdown() {
@@ -65,13 +79,13 @@ function startCountdown() {
 }
 function checkrules(){
 
-    rule10();
+    rule13();
     if(startTimer==0){
         startCountdown();
         startTimer=1;
     }
     if(rule1()==true){
-        console.log(ruleTimeCheck[0]);
+
         if(ruleTimeCheck[0]==0){
             countdownValue= countdownValue+30;
             ruleTimeCheck[0]=1;
@@ -88,6 +102,11 @@ function checkrules(){
         document.getElementById("rule8").style.display = "none";
         document.getElementById("rule9").style.display = "none";
         document.getElementById("rule10").style.display = "none";
+        document.getElementById("rule11").style.display = "none";
+        document.getElementById("rule12").style.display = "none";
+        document.getElementById("rule13").style.display = "none";
+        document.getElementById("rule14").style.display = "none";
+        document.getElementById("rule15").style.display = "none";
     }
     // RULE 2
     if(rule2()==true){
@@ -106,6 +125,11 @@ function checkrules(){
         document.getElementById("rule8").style.display = "none";
         document.getElementById("rule9").style.display = "none";
         document.getElementById("rule10").style.display = "none";
+        document.getElementById("rule11").style.display = "none";
+        document.getElementById("rule12").style.display = "none";
+        document.getElementById("rule13").style.display = "none";
+        document.getElementById("rule14").style.display = "none";
+        document.getElementById("rule15").style.display = "none";
     }
     //RULE 3
     if(rule3()==true){
@@ -123,6 +147,11 @@ function checkrules(){
         document.getElementById("rule8").style.display = "none";
         document.getElementById("rule9").style.display = "none";
         document.getElementById("rule10").style.display = "none";
+        document.getElementById("rule11").style.display = "none";
+        document.getElementById("rule12").style.display = "none";
+        document.getElementById("rule13").style.display = "none";
+        document.getElementById("rule14").style.display = "none";
+        document.getElementById("rule15").style.display = "none";
     }
     //RULE 4
     if(rule4()==true){
@@ -136,6 +165,11 @@ function checkrules(){
         document.getElementById("rule8").style.display = "none";
         document.getElementById("rule9").style.display = "none";
         document.getElementById("rule10").style.display = "none";
+        document.getElementById("rule11").style.display = "none";
+        document.getElementById("rule12").style.display = "none";
+        document.getElementById("rule13").style.display = "none";
+        document.getElementById("rule14").style.display = "none";
+        document.getElementById("rule15").style.display = "none";
     }
     //RULE 5
     if(rule5()==true){
@@ -151,6 +185,11 @@ function checkrules(){
         document.getElementById("rule8").style.display = "none";
         document.getElementById("rule9").style.display = "none";
         document.getElementById("rule10").style.display = "none";
+        document.getElementById("rule11").style.display = "none";
+        document.getElementById("rule12").style.display = "none";
+        document.getElementById("rule13").style.display = "none";
+        document.getElementById("rule14").style.display = "none";
+        document.getElementById("rule15").style.display = "none";
     }
     //RULE 6
     if(rule6()==true){
@@ -165,6 +204,11 @@ function checkrules(){
         document.getElementById("rule8").style.display = "none";
         document.getElementById("rule9").style.display = "none";
         document.getElementById("rule10").style.display = "none";
+        document.getElementById("rule11").style.display = "none";
+        document.getElementById("rule12").style.display = "none";
+        document.getElementById("rule13").style.display = "none";
+        document.getElementById("rule14").style.display = "none";
+        document.getElementById("rule15").style.display = "none";
     }
     //RULE 7
     if(rule7()==true){
@@ -178,6 +222,11 @@ function checkrules(){
         document.getElementById("rule8").style.display = "none";
         document.getElementById("rule9").style.display = "none";
         document.getElementById("rule10").style.display = "none";
+        document.getElementById("rule11").style.display = "none";
+        document.getElementById("rule12").style.display = "none";
+        document.getElementById("rule13").style.display = "none";
+        document.getElementById("rule14").style.display = "none";
+        document.getElementById("rule15").style.display = "none";
     }
     //RULE 8
     if(rule8()==true){
@@ -190,6 +239,11 @@ function checkrules(){
     else{
         document.getElementById("rule9").style.display = "none";
         document.getElementById("rule10").style.display = "none";
+        document.getElementById("rule11").style.display = "none";
+        document.getElementById("rule12").style.display = "none";
+        document.getElementById("rule13").style.display = "none";
+        document.getElementById("rule14").style.display = "none";
+        document.getElementById("rule15").style.display = "none";
     }
     //RULE 9
     if(rule9()==true){
@@ -201,20 +255,90 @@ function checkrules(){
     }
     else{
         document.getElementById("rule10").style.display = "none";
+        document.getElementById("rule11").style.display = "none";
+        document.getElementById("rule12").style.display = "none";
+        document.getElementById("rule13").style.display = "none";
+        document.getElementById("rule14").style.display = "none";
+        document.getElementById("rule15").style.display = "none";
     }
+    //RULE 10
     if(rule10()==true){
         if(ruleTimeCheck[9]==0){
-            countdownValue= countdownValue+30;
+            countdownValue= countdownValue+60;
             ruleTimeCheck[9]=1;
         }
         document.getElementById("rule11").style.display = "block";
     }
     else{
         document.getElementById("rule11").style.display = "none";
+        document.getElementById("rule12").style.display = "none";
+        document.getElementById("rule13").style.display = "none";
+        document.getElementById("rule14").style.display = "none";
+        document.getElementById("rule15").style.display = "none";
     }
-
-
+    //RULE 11
+    if(rule11()==true){
+        if(ruleTimeCheck[10]==0){
+            countdownValue= countdownValue+30;
+            ruleTimeCheck[10]=1;
+        }
+        document.getElementById("rule12").style.display = "block";
+    }
+    else{
+        document.getElementById("rule12").style.display = "none";
+        document.getElementById("rule13").style.display = "none";
+        document.getElementById("rule14").style.display = "none";
+        document.getElementById("rule15").style.display = "none";
+    }
+    //RULE 12
+    if(rule12()==true){
+        if(ruleTimeCheck[11]==0){
+            countdownValue= countdownValue+30;
+            ruleTimeCheck[11]=1;
+        }
+        document.getElementById("rule13").style.display = "block";
+    }
+    else{
+        document.getElementById("rule13").style.display = "none";
+        document.getElementById("rule14").style.display = "none";
+        document.getElementById("rule15").style.display = "none";
+    }
+    //RULE 13
+       if(rule13()==true){
+        if(ruleTimeCheck[12]==0){
+            countdownValue= countdownValue+30;
+            ruleTimeCheck[12]=1;
+        }
+        document.getElementById("rule14").style.display = "block";
+    }
+    else{
+        document.getElementById("rule14").style.display = "none";
+        document.getElementById("rule15").style.display = "none";
+    }
+    //RULE 14
+       if(rule14()==true){
+        if(ruleTimeCheck[13]==0){
+            countdownValue= countdownValue+30;
+            ruleTimeCheck[13]=1;
+        }
+        document.getElementById("rule15").style.display = "block";
+    }
+    else{
+        document.getElementById("rule15").style.display = "none";
+    }
+    //RULE 15
+        if(rule15()==true){
+            endgame();
+        }
 }
+
+function endgame(){
+    const countdownElement = document.getElementById('timer');
+    clearInterval(countdownInterval);
+    countdownElement.textContent = 'Congratulations! You Won!';
+    reset();
+}
+
 password.addEventListener("input", function () {
 
 
@@ -264,7 +388,6 @@ function rule3() {
         var min=30;
         var max=60;
         rand= getRandomInt(min,max);
-        console.log(rand);
         document.getElementById("randomInt").textContent="All digits must add up to " + rand;
         randLimiter++;
     }
@@ -383,13 +506,12 @@ function rule6(){
     if (match) {
         youtubeLink = match[0];
     } 
-    console
-    console.log("youtube link found:" + youtubeLink);
+
     var randDurationInSeconds = randMin *60 + randSec;
     var durationInSeconds;
     var apiKey = "put your API key here"; 
     var videoId = extractVideoId(youtubeLink);
-    console.log("videoID"+ videoId);
+
     var apiUrl = 'https://www.googleapis.com/youtube/v3/videos?id=' + videoId +
                  '&part=contentDetails&key=' + apiKey;
     fetch(apiUrl)
@@ -422,7 +544,6 @@ function rule6(){
 }
 function extractVideoId(url) {
     var match = url.match(/[?&]v=([^&]+)/);
-    console.log("match"+ match);
     return match ? match[1] : null;
 }
 function parseISO8601Duration(duration) {
@@ -450,7 +571,7 @@ function generateRandomString() {
     return randomString;
 }
 function rule7(){
-    if(password.value.includes(randomString) && document.getElementById("rule5").style.display === "block"){
+    if(password.value.includes(randomString) && document.getElementById("rule7").style.display === "block"){
         document.getElementById("rule7title").style.backgroundColor = "green";
         document.getElementById("rule7content").style.backgroundColor = "#5FFF5F";
         return true;
@@ -474,7 +595,7 @@ function rule8(){
 
     lowerCasePassword= password.value.toLowerCase();
     for(var x=0; x< europeanCountries.length; x++){
-        if(lowerCasePassword.includes(europeanCountries[x].toLowerCase())){
+        if(lowerCasePassword.includes(europeanCountries[x].toLowerCase())&& document.getElementById("rule8").style.display === "block"){
             document.getElementById("rule8title").style.backgroundColor = "green";
             document.getElementById("rule8content").style.backgroundColor = "#5FFF5F";
             return true;
@@ -492,8 +613,7 @@ function rule9(){
     let month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
     let day = currentDate.getDate().toString().padStart(2, '0');
     let stringDate = `${day}/${month}/${year.toString().slice(-2)}`;
-    console.log(stringDate);
-    if(password.value.includes(stringDate)){
+    if(password.value.includes(stringDate) && document.getElementById("rule9").style.display === "block"){
         document.getElementById("rule9title").style.backgroundColor = "green";
         document.getElementById("rule9content").style.backgroundColor = "#5FFF5F";
         return true;
@@ -518,15 +638,13 @@ function rule10(){
       randDog=getRandomInt(0, 13);  
       LimiterRandDog=LimiterRandDog+1;
     }
-    console.log(randDog);
-    console.log(dogRaces[randDog]);
     if(randDog <10){
         document.getElementById("dogImg").src = "dog_pics/0"+randDog+".jpg";
     }
     else{
         document.getElementById("dogImg").src = "dog_pics/"+randDog+".jpg";
     }
-    if(password.value.toLowerCase().includes(dogRaces[randDog])){
+    if(password.value.toLowerCase().includes(dogRaces[randDog]) && document.getElementById("rule10").style.display === "block"){
         document.getElementById("rule10title").style.backgroundColor = "green";
         document.getElementById("rule10content").style.backgroundColor = "#5FFF5F";
         return true;
@@ -537,6 +655,142 @@ function rule10(){
         return false;
     }
 }
+var LimiterRandRiddle=0;
+var randRiddle;
+
+function rule11(){
+    //0 black hole ----1 ketchup ----2 light ----3 atom ---4 life --- 5 website --- 6 trophy ---7 painting ---8 star 9---27
+    var printRiddle= document.getElementById("riddle");
+    const riddleAns= [
+        "black hole", "ketchup", "light", "atom", "life", "website", "trophy", "painting", "star", "27",
+    ];
+    const riddles = [
+        "<br>I'm born from the remnants of a massive star,<br>A celestial enigma, both near and far.<br>I devour all that comes too close,<br>Even light can't escape, it's engrossed.<br>In the cosmos, I'm a mysterious role.", 
+        "<br>I'm found in a bottle or a squeeze,<br>On burgers, fries, and more, if you please.<br>I'm red and tangy, a condiment so bold,<br>Enhancing flavors, turning food into gold.<br>What am I, in a savory role,<br>That adds flavor to your favorite foods in a bowl?",
+        "<br>I'm the speedster of the cosmic race,<br>Invisible traveler through time and space.<br>I bounce off objects, I make things gleam,<br>I'm every artist's muse, in their wildest dream.<br>Photons carry my message, so swift,<br>What am I, this energy that spirits uplift?",
+        "<br>I'm the building block of matter, so small and neat,<br>Protons, neutrons, electrons, I can't be beat.<br>In compounds and elements, I always play a part,<br>A fundamental piece of science and art.<br>What am I, in the science realm's chats,<br>That make up everything, from ants to bats?",
+        "<br>I'm a journey that we all must take,<br>A fragile gift, yet strong, I make.<br>From birth to end, a story unfolds,<br>With chapters of tales, both young and old.<br>What am I, a tapestry woven with time,<br>A precious, fleeting, and beautiful rhyme?",
+        "<br>I'm a digital place where you surf and roam,<br>A collection of pages, your second home.<br>HTML and CSS give me my grace,<br>With links and images in their rightful place.<br>What am I, in the virtual heights,<br>Where information flows, day and night?",
+        "<br>I stand on a pedestal, gleaming with pride,<br>A symbol of victory, with nothing to hide.<br>I'm earned through hard work, skill, and might,<br>A cherished reward for an unforgettable fight.<br>What am I, a symbol of glory and glee,<br>In the world of competition, who can I be?",
+        "<br>I'm a canvas filled with colors so bright,<br>A captured moment, a visual delight.<br>Brush strokes and pigments, I come to life,<br>In galleries and homes, away from strife.<br>What am I, a masterpiece on display,<br>In the world of art, I often hold sway?",
+        "<br>I twinkle in the night, so high and far,<br>A shimmering gem in the cosmic jar.<br>I'm a fusion furnace, burning bright,<br>My gravity shapes the universe's flight.<br>What am I, a celestial body so far,<br>A beacon of light, like a celestial czar?",
+        "<br>I'm a number that's not often prime,<br>Divisible by three, multiple times.<br>A cube of a digit, I stand tall,<br>In mathematics, I often enthrall.<br>What am I, in the numbers' heaven,<br>A trio of nines, a math lover's given?",
+    ];
+    if(LimiterRandRiddle==0){
+
+        randRiddle=getRandomInt(0, 9);  
+        LimiterRandRiddle=LimiterRandRiddle+1;
+    }
+    printRiddle.innerHTML= riddles[randRiddle];
+    if(password.value.toLowerCase().includes(riddleAns[randRiddle])&& document.getElementById("rule11").style.display === "block"){
+        document.getElementById("rule11title").style.backgroundColor = "green";
+        document.getElementById("rule11content").style.backgroundColor = "#5FFF5F";
+        return true;
+    }
+    else{
+        document.getElementById("rule11title").style.backgroundColor = "red";
+        document.getElementById("rule11content").style.backgroundColor = "#FF5F5F";
+        return false;
+    }
+
+}
+
+function getRandomHexColor() {
+    var red = Math.floor(Math.random() * 256);
+    var green = Math.floor(Math.random() * 256);
+    var blue = Math.floor(Math.random() * 256);
+    var redHex = red.toString(16).padStart(2, '0');
+    var greenHex = green.toString(16).padStart(2, '0');
+    var blueHex = blue.toString(16).padStart(2, '0');
+    var hexColor = "#" + redHex + greenHex + blueHex;
+    return hexColor;
+}
+var hexRandLimiter=0;
+var hexColor;
+function rule12(){
+    var displayHex = document.getElementById("color");
+    if(hexRandLimiter==0){
+        hexColor=getRandomHexColor();
+        hexRandLimiter=hexRandLimiter+1;
+    }
+    displayHex.style.backgroundColor=hexColor;
+    if(password.value.toLowerCase().includes(hexColor)&& document.getElementById("rule12").style.display === "block"){
+        document.getElementById("rule12title").style.backgroundColor = "green";
+        document.getElementById("rule12content").style.backgroundColor = "#5FFF5F";
+        return true;
+    }
+    else{
+        document.getElementById("rule12title").style.backgroundColor = "red";
+        document.getElementById("rule12content").style.backgroundColor = "#FF5F5F";
+        return false;
+    }
+}
+
+var randLangLimiter=0;
+var randLang;
+function rule13(){
+    var printLanguage= document.getElementById("language");
+    const languageAns= [
+        "arabic", "mandarin", "japanese", "korean", "ukranian", "turkish", "hebrew",
+        "swahili", "hindi", "viatnamese", "hausa", "amharic", "yoruba", "zulu",
+
+    ];
+    const languages = [
+        "مرحبا، أنا أحب البطاطس", "你好，我喜欢土豆", "こんにちは、ジャガイモが好きです", 
+        "안녕하세요 저는 감자를 좋아해요", "привіт я люблю картоплю", "merhaba patatesleri severim",
+        "שלום אני אוהב תפוחי אדמה", "habari napenda viazi", "नमस्ते मुझे आलू पसंद है",
+        "xin chào tôi thích khoai tây", "sannu ina son dankali", "ሰላም ድንች እወዳለሁ።",
+        "hello Mo fẹ poteto", "sawubona ngithanda amazambane",
+
+    ];
+    
+    if(randLangLimiter==0){
+        randLang=getRandomInt(0, 13);  
+        randLangLimiter=randLangLimiter+1;
+    }
+    printLanguage.innerHTML= languages[randLang];
+    if(password.value.toLowerCase().includes(languageAns[randLang])&& document.getElementById("rule13").style.display === "block"){
+        document.getElementById("rule13title").style.backgroundColor = "green";
+        document.getElementById("rule13content").style.backgroundColor = "#5FFF5F";
+        return true;
+    }
+    else{
+        document.getElementById("rule13title").style.backgroundColor = "red";
+        document.getElementById("rule13content").style.backgroundColor = "#FF5F5F";
+        return false;
+    }
+}
+function rule14(){
+
+    if(password.value.toLowerCase().includes("potato") && document.getElementById("rule14").style.display === "block"){
+        document.getElementById("rule14title").style.backgroundColor = "green";
+        document.getElementById("rule14content").style.backgroundColor = "#5FFF5F";
+        return true;
+    }
+    else{
+        document.getElementById("rule14title").style.backgroundColor = "red";
+        document.getElementById("rule14content").style.backgroundColor = "#FF5F5F";
+        return false;        
+    }
+
+}
+function rule15(){
+    var length= password.value.length;
+
+    if(password.value.includes(length)&& document.getElementById("rule15").style.display === "block"){
+        document.getElementById("rule14title").style.backgroundColor = "green";
+        document.getElementById("rule14content").style.backgroundColor = "#5FFF5F";
+        return true;
+    }
+    else{
+        document.getElementById("rule14title").style.backgroundColor = "red";
+        document.getElementById("rule14content").style.backgroundColor = "#FF5F5F";
+        return false;
+    }
+}
+
+
+
 function gamble(){
     
     var rand = [0,0,0];
@@ -558,6 +812,8 @@ function gamble(){
             }
         }
         if(slot[0]==slot[1]&&slot[0]==slot[2]){
+            document.getElementById("gambleSlotTitle").style.backgroundColor = "green";
+            document.getElementById("gambleSlotContent").style.backgroundColor = "#5FFF5F";
             if(slot[0]=="Cat"){
                 countdownValue=countdownValue+30;
             }
@@ -570,6 +826,10 @@ function gamble(){
             if(slot[0]=="7"){
                 countdownValue=countdownValue+(60*5);
             }
+        }
+        else{
+            document.getElementById("gambleSlotTitle").style.backgroundColor = "red";
+            document.getElementById("gambleSlotContent").style.backgroundColor = "#FF5F5F";
         }
         document.getElementById("spinResult1").textContent=slot[0];
         document.getElementById("spinResult2").textContent=slot[1];
