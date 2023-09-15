@@ -1,6 +1,7 @@
 body{
-    background-color: black;
-    color: white;
+    background-color: #ffff58;
+    color: black;
+    font-family: Arial, Verdana, sans-serif;
 }
 .container{
     margin-top:10%;
@@ -39,6 +40,8 @@ body{
     background-color: white;    
 }
 .gambleSlotTitle{
+    font-size: 20px;
+    font-weight: bold;
     height: 30px;
     display: flex;
     align-items: center;
@@ -49,6 +52,7 @@ body{
     background-color: red;
 }
 .gambleSlotContent{
+    font-size: 18px;
     padding-top: 10px;
     display: flex;
     flex-direction: column;
@@ -68,6 +72,7 @@ body{
     font-size: 60px;
 }
 .password{
+    border-radius: 15px;
     font-size: 20px;
     height: 50px;
     width: 700px;
@@ -76,7 +81,7 @@ body{
     color: black;
     height: 200px;
     width: 800px;
-    background-color: black;
+    background-color: #ffff58;
     margin-top: 20px;
 }
 .rulestitle{
@@ -91,6 +96,7 @@ body{
     background-color: red;
 }
 .rulescontent{
+    font-size: 20px;
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     display: flex;
@@ -99,6 +105,26 @@ body{
     height: 100%;
     background-color: rgb(255, 95, 95);
 }
+.buttonStyles{
+    background-color: rgb(255, 95, 95);
+    color: #050801;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 4px;
+
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  
+  .buttonStyles:hover{
+      background: rgb(255, 41, 41);
+      color: #050801;
+      box-shadow: 0 0 15px rgb(255, 41, 41),
+                  0 0 15px rgb(255, 41, 41),
+                  0 0 15px rgb(255, 41, 41),
+                  0 0 15px rgb(255, 41, 41);
+  }
 .dog_img{
     width: 300px;
     height: 180px;
@@ -160,10 +186,10 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        position: absolute;
+        position: static;
         left: 50%;
         bottom: 0;
-        transform: translateX(-55%);
+
     }
 }
 @media (max-width: 1000px) {
@@ -172,10 +198,9 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        position: absolute;
+        position: static;
         left: 50%;
         bottom: 0;
-        transform: translateX(-55%);
     }
     .password{
         font-size: 20px;
@@ -196,10 +221,9 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        position: absolute;
+        position: static;
         left: 50%;
         bottom: 0;
-        transform: translateX(-55%);
     }
     .password{
         font-size: 20px;
@@ -222,11 +246,10 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        position: absolute;
+        position: static;
         left: 50%;
         bottom: 0;
         margin-top:600px;
-        transform: translateX(-55%);
     }
     .password{
         font-size: 20px;

@@ -460,36 +460,16 @@ function rule4(){
 
 function rule5(){
     var passwordValue = password.value;
-    var numbers = passwordValue.match(/\d+/g);
-    var mergedNumbers = parseInt(numbers.join(''), 10);
-    var arrayNumbers = mergedNumbers.toString().split('');
-    var arrayYear = [];
-    var year = '';
-    for (var x = 0; x < arrayNumbers.length; x++) {
-        if (arrayNumbers[x] == 1 && arrayNumbers[x + 1] == 9) {
-            for (var y = 0; y < 4 && (x + y) < arrayNumbers.length; y++) {
-                year += arrayNumbers[x + y];
-            }
-            arrayYear.push(year);
-        }
-        if (arrayNumbers[x] == 2 && arrayNumbers[x + 1] == 0) {
-            for (var y = 0; y < 4 && (x + y) < arrayNumbers.length; y++) {
-                year += arrayNumbers[x + y];
-            }
-            arrayYear.push(year);
-        }
+    for(var x=1900;x<2023;x++){
+        if(passwordValue.includes(x) && document.getElementById("rule5").style.display === "block"){
+            document.getElementById("rule5title").style.backgroundColor = "green";
+            document.getElementById("rule5content").style.backgroundColor = "#5FFF5F";
+            return true;
+        }      
     }
-    year = parseInt(arrayYear.join(''));
-    if(year >= 1900 && year <= 2023 && document.getElementById("rule5").style.display === "block"){
-        document.getElementById("rule5title").style.backgroundColor = "green";
-        document.getElementById("rule5content").style.backgroundColor = "#5FFF5F";
-        return true;
-    }
-    else{
-        document.getElementById("rule5title").style.backgroundColor = "red";
-        document.getElementById("rule5content").style.backgroundColor = "#FF5F5F";
-        return false;
-    }
+    document.getElementById("rule5title").style.backgroundColor = "red";
+    document.getElementById("rule5content").style.backgroundColor = "#FF5F5F";
+    return false;
 }
 
 var randMin=0, randSec=0;
