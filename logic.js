@@ -791,7 +791,6 @@ function rule15(){
 
 
 function gamble(){
-    
     var rand = [0,0,0];
     var slot = ["", "", "", ""];
     if(countdownValue>5){
@@ -834,7 +833,10 @@ function gamble(){
         document.getElementById("spinResult2").textContent=slot[1];
         document.getElementById("spinResult3").textContent=slot[2];
         countdownValue=countdownValue-5;
-        updateCountdown(); 
+        const countdownElement = document.getElementById('timer');
+        const minutes = Math.floor(countdownValue / 60);
+        const seconds = countdownValue % 60;
+        countdownElement.textContent = `Time remaining: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
     }
 }
 
