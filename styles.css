@@ -156,6 +156,7 @@ body{
 }
 @media (max-width: 1500px) {
     .sticky{
+        margin-top:600px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -167,6 +168,7 @@ body{
 }
 @media (max-width: 1000px) {
     .sticky{
+        margin-top:600px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -190,6 +192,7 @@ body{
 }
 @media (max-width: 700px) {
     .sticky{
+        margin-top:600px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -210,7 +213,34 @@ body{
         background-color: black;
         margin-top: 20px;
     }
+    .gambleSlot{ 
+        width: 350px;   
+    }
+}
+@media (max-width: 500px) {
+    .sticky{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        margin-top:600px;
+        transform: translateX(-55%);
+    }
+    .password{
+        font-size: 20px;
+        height: 50px;
+        width: 250px;  
+    }
+    .rules{
+        color: black;
+        height: 200px;
+        width: 300px;
+        background-color: black;
+        margin-top: 20px;
+    }
     .gambleSlot{
-        width: 300px;   
+        width: 250px;   
     }
 }
