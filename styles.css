@@ -156,7 +156,7 @@ body{
 }
 @media (max-width: 1500px) {
     .sticky{
-        margin-top:400px;
+        margin-top:600px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -168,7 +168,7 @@ body{
 }
 @media (max-width: 1000px) {
     .sticky{
-        margin-top:400px;
+        margin-top:600px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -192,7 +192,7 @@ body{
 }
 @media (max-width: 700px) {
     .sticky{
-        margin-top:400px;
+        margin-top:600px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -225,7 +225,7 @@ body{
         position: absolute;
         left: 50%;
         bottom: 0;
-        margin-top:400px;
+        margin-top:600px;
         transform: translateX(-55%);
     }
     .password{
