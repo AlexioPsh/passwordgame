@@ -80,6 +80,7 @@ function startCountdown() {
 function checkrules(){
 
     rule13();
+    rule15();
     if(startTimer==0){
         startCountdown();
         startTimer=1;
@@ -341,9 +342,9 @@ function checkrules(){
         document.getElementById("rule15").style.display = "none";
     }
     //RULE 15
-        if(rule15()==true){
-            endgame();
-        }
+    if(rule15()==true){
+        endgame();
+    }
 }
 
 function endgame(){
@@ -394,10 +395,8 @@ function rule2(){
 var rand=0;
 function rule3() {
     var passwordValue = password.value;
-    var numbers = passwordValue.match(/\d+/g);
-    var mergedNumbers= parseInt(numbers.join(''),10);
-    var arrayNumbers = mergedNumbers.toString().split('');
     var sum = 0;
+    var character;
     if(randLimiter==0){
         var min=50;
         var max=80;
@@ -405,9 +404,13 @@ function rule3() {
         document.getElementById("randomInt").textContent="All digits must add up to " + rand;
         randLimiter++;
     }
-    for (var i = 0; i < arrayNumbers.length; i++) {
-        sum += parseInt(arrayNumbers[i], 10);
+    for (var i = 0; i < passwordValue.length; i++) {
+        character = passwordValue.charAt(i);
+        if(!isNaN(character) && character!=" "){
+            sum +=parseInt(character);
+        }
     }
+
     document.getElementById("currentSum").textContent="Current sum: " + sum;
     if(parseInt(sum) === parseInt(rand)){
         if(document.getElementById("rule3").style.display === "block"){
@@ -774,16 +777,19 @@ function rule14(){
 
 }
 function rule15(){
-    var length= password.value.length;
-
-    if(password.value.includes(length)&& document.getElementById("rule15").style.display === "block"){
-        document.getElementById("rule14title").style.backgroundColor = "green";
-        document.getElementById("rule14content").style.backgroundColor = "#5FFF5F";
+    var x= password.value.length;
+    var passwordValue = password.value;
+    var displayLength = document.getElementById("length");
+    displayLength.textContent=x;
+    if(passwordValue.includes(x.toString())){
+        document.getElementById("rule15title").style.backgroundColor = "green";
+        document.getElementById("rule15content").style.backgroundColor = "#5FFF5F";
         return true;
     }
     else{
-        document.getElementById("rule14title").style.backgroundColor = "red";
-        document.getElementById("rule14content").style.backgroundColor = "#FF5F5F";
+
+        document.getElementById("rule15title").style.backgroundColor = "red";
+        document.getElementById("rule15content").style.backgroundColor = "#FF5F5F";
         return false;
     }
 }
