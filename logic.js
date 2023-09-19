@@ -781,7 +781,7 @@ function rule15(){
     var passwordValue = password.value;
     var displayLength = document.getElementById("length");
     displayLength.textContent=x;
-    if(passwordValue.includes(x.toString()) && document.getElementById("rule15").style.display === "block"){
+    if(passwordValue.includes(x.toString()) && document.getElementById("rule14").style.display === "block"){
         document.getElementById("rule15title").style.backgroundColor = "green";
         document.getElementById("rule15content").style.backgroundColor = "#5FFF5F";
         console.log("n é suposto entrar aqui");
