@@ -50,6 +50,7 @@ function reset(){
     password.value="";
     randMin=0;
     randSec=0;
+    randLimiter=0;
     limiterTime=0;
     LimiterRandDog=0;
     LimiterRandRiddle=0;
@@ -80,7 +81,6 @@ function startCountdown() {
 function checkrules(){
 
     rule13();
-    rule15();
     if(startTimer==0){
         startCountdown();
         startTimer=1;
@@ -784,7 +784,6 @@ function rule15(){
     if(passwordValue.includes(x.toString()) && document.getElementById("rule14").style.display === "block"){
         document.getElementById("rule15title").style.backgroundColor = "green";
         document.getElementById("rule15content").style.backgroundColor = "#5FFF5F";
-        console.log("n é suposto entrar aqui");
         endgame();
         return true;
     }
