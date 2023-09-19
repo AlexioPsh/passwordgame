@@ -341,7 +341,10 @@ function checkrules(){
     else{
         document.getElementById("rule15").style.display = "none";
     }
-    rule15();
+    //RULE 15
+    if(rule15()==true){
+        endgame();
+    }
 }
 
 function endgame(){
@@ -778,9 +781,10 @@ function rule15(){
     var passwordValue = password.value;
     var displayLength = document.getElementById("length");
     displayLength.textContent=x;
-    if(passwordValue.includes(x.toString())){
+    if(passwordValue.includes(x.toString()) && document.getElementById("rule15").style.display === "block"){
         document.getElementById("rule15title").style.backgroundColor = "green";
         document.getElementById("rule15content").style.backgroundColor = "#5FFF5F";
+        console.log("n é suposto entrar aqui");
         endgame();
         return true;
     }
