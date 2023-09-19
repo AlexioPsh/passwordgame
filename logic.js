@@ -341,6 +341,7 @@ function checkrules(){
     else{
         document.getElementById("rule15").style.display = "none";
     }
+    rule15();
 }
 
 function endgame(){
