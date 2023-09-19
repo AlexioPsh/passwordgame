@@ -3,6 +3,18 @@ body{
     color: black;
     font-family: Arial, Verdana, sans-serif;
 }
+body::-webkit-scrollbar {
+    width: 13px; 
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: rgb(90, 90, 90);
+}
+
+body::-webkit-scrollbar-track {
+    visibility: hidden;
+}
 .container{
     margin-top:10%;
     display: flex;
